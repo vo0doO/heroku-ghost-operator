@@ -28,7 +28,7 @@
     "ghost-storage-cloudinary": "2.2.1",
     "gdrive": "https://github.com/vo0doo/google-drive-ghost-storage-adapter#main",
     "simply": "https://github.com/vo0doo/simply#master",
-    "mysql": "^8"
+    "mysql": "^8.0"
   },
   "scripts": {
     "start": "node vo0doo.js",
