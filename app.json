@@ -2,7 +2,7 @@
   "name": "Deploy Ghost V4 on Heroku",
   "description": "Deploy latest Ghost v4 on Heroku",
   "logo": "https://ghost.org/favicon.ico",
-  "repository": "https://github.com/vo0doo/ghost-v4-on-heroku",
+  "repository": "https://github.com/vo0doo/heroku-ghost-operator",
   "scripts": {
     "postdeploy": "bin/init-deployment"
   },
