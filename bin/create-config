@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Ghost Configuration for Heroku
+// Призрачная конфигурация для Heroku
 
 var fs = require("fs");
 var path = require("path");
