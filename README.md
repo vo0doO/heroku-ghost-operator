@@ -1,66 +1,66 @@
 # [Ghost 4.X](https://github.com/TryGhost/Ghost) on [Heroku](https://heroku.com)
-> Notice: If you are getting a Heroku policy error please refer to this [discussion](https://github.com/vo0doo/ghost-v4-on-heroku/discussions/24).
+> Извещение: Если вы получаете ошибку политики Heroku, пожалуйста, обратитесь к этому [discussion](https://github.com/vo0doo/heroku-ghost-operator/discussions/24).
 
-Ghost is world's most popular modern publishing platform for creating a new media platform. It has been used by Apple, SkyNews, Buffer, OpenAI, and thousands more.
-You can visit the project's website at <a href="https://ghost.org/" target="_blank">https://ghost.org</a>, or read the docs on <a href="https://ghost.org/docs" target="_blank">https://ghost.org/docs</a>.
+Ghost – самая популярная в мире современная издательская платформа для создания новой медиа-платформы. Он использовался Apple, SkyNews, Buffer, OpenAI и тысячами других.
+Вы можете посетить сайт проекта по адресу <a href="https://ghost.org/" target="_blank">https://ghost.org</a>, или прочитайте документацию на <a href="https://ghost.org/docs" target="_blank">https://ghost.org/docs</a>.
 
-### Deploy
+### Развертывать
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-> I am available to work with individuals or companies who are looking to build their blazingly super-fast publishing platform. [Contact-Me](https://bit.ly/getfastblog)
+> Я готов работать с частными лицами или компаниями, которые хотят создать свою невероятно быструю издательскую платформу.. [Contact-Me](https://bit.ly/getfastblog)
 
 
-If the above button does not work for you, disable anything that might be blocking Heroku from inferring the referrer (e.g. Brave shield), or try this: https://heroku.com/deploy?template=https://github.com/vo0doo/ghost-v4-on-heroku (if you're using a fork, make sure to point the template link to your repo).
+Если приведенная выше кнопка не работает для вас, отключите все, что может блокировать Heroku от вывода реферера (e.g. Brave shield), или попробуйте это: https://heroku.com/deploy?template=https://github.com/vo0doo/heroku-ghost-operator (Если вы используете форк, обязательно укажите ссылку шаблона на репозиторий).
 
-**NOTE**: we do _not_ support deploying by downloading the source file or by copying over a cloned folder. Downloading/copying folders tends to break symlinks, so we recommend that you deploy by clicking the button in this repository or your fork on GitHub.
+**ЗАМЕТКА**: мы поддерживаем развертывания путем загрузки исходного файла или копирования через клонированную папку. Загрузка/копирование папок имеет тенденцию разрушать символические ссылки, поэтому мы рекомендуем вам выполнить развертывание, нажав кнопку в этом репозитории или форке на GitHub.
 
-### Things you should know
+### Что вы должны знать
 
-After deployment,
+После развертывания,
 
-- First, visit Ghost at `https://YOURAPPNAME.herokuapp.com/ghost` to set up your admin account
-- The app may take a few minutes to come to life
-- Your blog will be publicly accessible at `https://YOURAPPNAME.herokuapp.com`
-- If you subsequently set up a [custom domain](https://devcenter.heroku.com/articles/custom-domains) for your blog, you’ll need to update your Ghost blog’s `APP_PUBLIC_URL` environment variable accordingly
-- If you create a lot of content or decide to scale-up the dynos to support more traffic, a more substantial, paid database plan will be required.
+- Во-первых, посетите Ghost в `https://YOURAPPNAME.herokuapp.com/ghost` Чтобы настроить учетную запись администратора, выполните следующие действия.
+- Оживление приложения может занять несколько минут
+- Ваш блог будет общедоступным по адресу `https://YOURAPPNAME.herokuapp.com`
+- Если вы впоследствии настроили [custom domain](https://devcenter.heroku.com/articles/custom-domains) для вашего блога вам нужно будет обновить блог Ghost `APP_PUBLIC_URL` соответствующая переменная среды
+- Если вы создаете много контента или решаете масштабировать dynos для поддержки большего трафика, потребуется более существенный, платный план базы данных.
 
-### Configuring S3 file uploads
+### Настройка загрузки файлов S3
 
-The blog is configured to use Cloudinary file storage by default. If you want to configure S3 file storage, create an S3 bucket on Amazon AWS, and then specify the following details as environment variables on the Heroku deployment page (or add these environment variables to your app after deployment via the Heroku dashboard):
+Блог настроен на использование хранилища файлов Cloudinary по умолчанию. Если вы хотите настроить файловое хранилище S3, создайте корзину S3 в VK CS, а затем укажите следующие сведения в качестве переменных среды на странице развертывания Heroku (или добавьте эти переменные среды в приложение после развертывания с помощью панели мониторинга Heroku).:
 
-- `S3_ACCESS_KEY_ID` and `S3_ACCESS_SECRET_KEY`: **Required if using S3 uploads**. These fields are the AWS key/secret pair needed to authenticate with Amazon S3. You must have granted this keypair sufficient permissions on the S3 bucket in question in order for S3 uploads to work.
+- `S3_ACCESS_KEY_ID` и `S3_ACCESS_SECRET_KEY`: **Требуется при использовании загрузки S3**. Эти поля представляют собой пару ключ/секрет vkcs, необходимую для аутентификации в Amazon S3. Вы должны предоставить этой паре ключей достаточные разрешения для рассматриваемой корзины S3, чтобы загрузка S3 работала.
 
-- `S3_BUCKET_NAME`: **Required if using S3 uploads**. This is the name you gave to your S3 bucket.
+- `S3_BUCKET_NAME`: **Требуется при использовании загрузки S3**. Это имя, которое вы дали своей корзине S3.
 
-- `S3_BUCKET_REGION`: **Required if using S3 uploads**. Specify the region the bucket has been created in, using slug format (e.g. `us-east-1`, `eu-west-1`). A full list of S3 regions is [available here](http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region).
+- `S3_BUCKET_REGION`: **Требуется при использовании загрузки S3**. Укажите область, в которой была создана корзина, используя формат slug (e.g. `msk-1`, `,msk-2`). Полный список регионов S3 [доступно здесь](http://docs.vkcs.amazon.com/general/latest/gr/rande.html#s3_region).
 
-- `S3_ASSET_HOST_URL`: Optional, even if using S3 uploads. Use this variable to specify the S3 bucket URL in virtual host style, path style or using a custom domain. You should also include a trailing slash (example `https://my.custom.domain/`). See [this page](http://docs.aws.amazon.com/AmazonS3/latest/dev/VirtualHosting.html) for details.
+- `S3_ASSET_HOST_URL`: Необязательно, даже если используется загрузка S3. Эта переменная используется для указания URL-адреса корзины S3 в стиле виртуального узла, стиле пути или с помощью личного домена. Следует также включить косую черту в конце (пример `https://my.custom.domain/`). Видеть [this page](http://docs.vkcs.amazon.com/AmazonS3/latest/dev/VirtualHosting.html) подробнее.
 
-Once your app is up and running with these variables in place, you should be able to upload images via the Ghost interface and they’ll be stored in Amazon S3. :sparkles:
+Как только ваше приложение будет запущено и запущено с этими переменными, вы сможете загружать изображения через интерфейс Ghost, и они будут храниться в VKCS S3. :sparkles:
 
-### Setting up SMTP service
+### Настройка службы SMTP
 
-When you spin up your heroku dyno for the first time, mailgun is by default setup with a sandbox account. It means, sending emails to only authorized reciepients is supported. If you want to send emails / invite your collaborators you need to set their email in authorized recipient section on mailgun dashboard. See https://help.mailgun.com/hc/en-us/articles/217531258-Authorized-Recipients for more.
+Когда вы впервые запускаете heroku dyno, mailgun по умолчанию настраивается с учетной записью песочницы. Это означает, что поддерживается отправка электронных писем только авторизованным получателям. Если вы хотите отправлять электронные письма / invite ваши соавторы вам нужно настроить их электронную почту в разделе авторизованных получателей на панели инструментов mailgun. Видеть https://help.mailgun.com/hc/en-us/articles/217531258-Authorized-Recipients для большего.
 
-A more permanent solution would be to use a custom domain and verify your domain via mailgun customer support. Cheers!
+Более постоянным решением было бы использование личного домена и проверка вашего домена через службу поддержки клиентов mailgun. Аплодисменты!
 
-FYI: You can access mailgun dashboard by visiting heroku dashboard > click on your app > resources tab > click on mailgun addon.
+FYI: Вы можете получить доступ к панели инструментов mailgun, посетив панель инструментов heroku > нажмите на вкладку > ресурсов вашего приложения > нажмите на дополнение mailgun.
 
-### Chnage Config Vars Value in Heroku
-How can I change the value of `APP_PUBLIC_URL`, `MAILGUN_API_KEY`, `MAILGUN_DOMAIN`, `MAILGUN_PUBLIC_KEY`, `MAILGUN_SMTP_LOGIN`, `MYSQL_DATABASE_URL or JAWSDB_URL`, `S3_ACCESS_KEY_ID` ...etc?
-You cannot change the value in the `config.production.json` but you can change the values using the `Heroku CLI` or `Heroku Dashboard`.
-For more information read <a href="https://lovekesh.tech/how-to-create-update-and-delete-config-vars-in-the-heroku-app/" target="_blank">here</a>
+### Смена значение Config Vars в Heroku
+Как изменить значение `APP_PUBLIC_URL`, `MAILGUN_API_KEY`, `MAILGUN_DOMAIN`, `MAILGUN_PUBLIC_KEY`, `MAILGUN_SMTP_LOGIN`, `MYSQL_DATABASE_URL or JvkcsDB_URL`, `S3_ACCESS_KEY_ID` ...и так далее?
+Вы не можете изменить значение в `config.production.json` Но можно изменить значения с помощью кнопки `Heroku CLI` или `Heroku Dashboard`.
+Для получения дополнительной информации прочитайте <a href="https://lovekesh.tech/how-to-create-update-and-delete-config-vars-in-the-heroku-app/" target="_blank">здесь</a>
 
-### Disclaimer
+### Отказ
 
-This repo has some blocks of open-source code. I have taken that code from the repositories of the previous version of ghost deployment on Heroku. 
+Этот репозиторий имеет несколько блоков открытого исходного кода. Я взял этот код из репозиториев предыдущей версии развертывания ghost на Heroku. 
 
-### Problems or need help?
-- [Ask Question](https://ask.codebulbs.com/)
-- [Open an Issue](https://github.com/vo0doo/ghost-v4-on-heroku/issues/new/)
-- [Use GitHub Discussions](https://github.com/vo0doo/ghost-v4-on-heroku/discussions)
+### Проблемы или нужна помощь?
+- [Задать вопрос](https://ask.codebulbs.com/)
+- [Открыть выпуск](https://github.com/vo0doo/heroku-ghost-operator/issues/new/)
+- [Использование обсуждений GitHub](https://github.com/vo0doo/heroku-ghost-operator/discussions)
 
-### License
-Released under the [MIT license](https://github.com/vo0doo/ghost-v4-on-heroku/blob/main/LICENSE), just like the Ghost project itself.
+### Лицензия
+Выпущено под [MIT лицензия](https://github.com/vo0doo/heroku-ghost-operator/blob/main/LICENSE), так же, как и сам проект Ghost.
 

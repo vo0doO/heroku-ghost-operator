@@ -1,7 +1,7 @@
 {
   "name": "heroku-ghost-operator",
   "version": "4.36.2",
-  "description": "Deploy latest ghost v4 on Heroku",
+  "description": "Deploy latest ghost Heroku",
   "main": "vo0doo.js",
   "repository": {
     "type": "git",
@@ -9,7 +9,6 @@
   },
   "keywords": [
     "ghost",
-    "ghost v4",
     "heroku"
   ],
   "author": "vo0doo",
@@ -25,8 +24,8 @@
     "casper": "https://github.com/vo0doo/Casper#main",
     "krabi": "https://github.com/vo0doo/krabi#master",
     "ghost": "^4.41.2",
-    "ghost-storage-adapter-s3": "^2.8.0",
-    "ghost-storage-cloudinary": "^2.2.1",
+    "ghost-storage-adapter-s3": "2.8.0",
+    "ghost-storage-cloudinary": "2.2.1",
     "simply": "https://github.com/vo0doo/simply#master",
     "mysql": "^8"
   },
