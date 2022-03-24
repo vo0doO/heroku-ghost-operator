@@ -32,7 +32,7 @@
   },
   "scripts": {
     "start": "node vo0doo.js",
-    "postinstall": "bash bin/gdrive && bash bin/themes.sh",
+    "postinstall": "bash bin/gdrive && bash bin/themes.sh&&",
     "postinstall2": "bash bin/cloudinary.sh && bash bin/aws-s3.sh && bash bin/themes.sh"
   }
 }

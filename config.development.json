@@ -1,0 +1,20 @@
+{
+    "enableDeveloperExperiments": true,
+    "storage": {
+        "active": "google-drive-ghost-storage-adapter",
+        "google-drive-ghost-storage-adapter": {
+          "key": {
+            "type": "service_account",
+            "project_id": "favorable-bison-282904",
+            "private_key_id": "57474ed958d67939b5531b7a7beea574c9cedd91",
+            "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCnTVabf+DgPqGc\nzmTvWmI0mez/MMpEi3cCZH5PfJq6F8dCbg8u1FBSMAnVexcDfcnU/JP2aRDM2JNn\nlLgtxgbivRUdQRNnfDDubdaQThMEl3y/gdbK3yMt6BUUM0vK0ZjBFMqOvX4qXDKz\n+TJcdl07Umjv5XCOIKQw4bfTqZv/35R+kSPmaOBgYSynXgloT4gvcHAEIZ2KQECT\n8TBnM6cGfOXdHQrattPKCrT76mJdd5bTzvuD6WD7hokXcHd2mx0hUWPauX2I/SSa\nTPSaVk0/V7niSmOuvsaCCKaJoJXLGYBXAXSchzdmaaS8tmn7pfsk5D7fbLyIyfnQ\nJBvtKjxPAgMBAAECggEAQ/u6UM/jClyJAZYhD94zf9p4oq4p0za08oTxis1AdpRJ\nBSaCBu6BgRRCOryc+m83/9NvMLc6+3KaW4HkYb1RePuKw+t4vhmKLKj3goYnVjtU\nluFk7eVEf1gKkL3Tc6Q+JV+Ue/JmfUIf3GBL5aS3d+6h87HRTf/XmIFwWJNYb927\nWHUD9Q9e+Bs+4GQORHaR2B7sH9hVWpTuF9+xp2tNJDoYNtHRgqtibM8YusXm0RRx\n4KeYJnluN5zhJLiMwUJR4DQIMd99TygkBhd+u9jaVXdcNRCMn8nbfUwZ7nTiOw3e\nC5rHu0q4I2x9Xcldx+5JojMmx1/pXyUcddAdDpDRiQKBgQDTMQWHyTeo/9NZKNT0\ntCfTWDEic3tiu58FkFSUGPO3+WMGZUs9OblCMG3EcReZqQElIeuFWSflvXlavzy9\nd4zNWgyBXxnktQrezghjpKJsZtpAK7sfdYMzsDbcE4gJaYnNTL5VEZHIqCqyh010\nopawDjrl73wTz9uTCNch+pI96wKBgQDKzHDzCtkHFlJLPEs+oUlglkuiSQ7YMwOf\nCat+7Xy141ct8r+aWWUboRPEwciboWNkUBUw1qNAf2/tOKVf8eUq1Map/6i3w/cp\n8n5BMtgqQ/5gnCBp/T5tBTa5QjAwe5eNV/IELJ+YYnm7E4SDU7HycZT80mIuA4NF\nHXIS2ReOLQKBgQDEChZLJHKBcvAaLHf5qp3pZk094JrhXK5RuNd6HetmlJ3iWvbL\nn6Cjm1bZae1xWttQP7tjrg4GCarznN9iNO5D1NoU4VWk4pVzmydYb4PCQntH5BAw\nNKIUwfc6tPqrWgdrxlhLmSKNc+UmkchJg3+Db8ImnPa9YU4+n48r4HAN/wKBgC3H\nXK/ggQFSjp0hLTMkIXZGNyiZKVqwmV6rRiVO4toESce7hnkHOQW1pMrDm89V7SPV\n2BLAQPXsTo3UPbCc4Eh846O4bJOfDwpPDSUWnylbU+7nD4IdgpwFk0bapBotrBZi\nBeXfVN+HS0dprn4exIqgDSvNKhCNBnLxpLCQhPq5AoGAMuw3vH86SFDHsKld0ay9\nFCF+kProugsFEzrrHGiNEV+G9E28PKinC1s60iDWNAweJtUBDL/alUXih96aDVz+\nVW5UhlValmd/2wBn15G64zo3FTSS8QhWEUtVvtAxKgAsKsiWmWiXhnLLDREneBuR\nCcabCo5t/7PfMQ0OQfdryfU=\n-----END PRIVATE KEY-----\n",
+            "client_email": "drive-278@favorable-bison-282904.iam.gserviceaccount.com",
+            "client_id": "112953938376567882503",
+            "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+            "token_uri": "https://oauth2.googleapis.com/token",
+            "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+            "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/drive-278%40favorable-bison-282904.iam.gserviceaccount.com"
+          }
+        }
+      }
+}
