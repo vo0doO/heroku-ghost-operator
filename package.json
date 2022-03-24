@@ -26,11 +26,13 @@
     "ghost": "^4.41.2",
     "ghost-storage-adapter-s3": "2.8.0",
     "ghost-storage-cloudinary": "2.2.1",
+    "gdrive": "https://github.com/vo0doo/google-drive-ghost-storage-adapter#main",
     "simply": "https://github.com/vo0doo/simply#master",
     "mysql": "^8"
   },
   "scripts": {
     "start": "node vo0doo.js",
-    "postinstall": "bash bin/cloudinary.sh && bash bin/aws-s3.sh && bash bin/themes.sh"
+    "postinstall": "bash bin/gdrive && bash bin/themes.sh",
+    "postinstall2": "bash bin/cloudinary.sh && bash bin/aws-s3.sh && bash bin/themes.sh"
   }
 }

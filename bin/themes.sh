@@ -1,7 +1,7 @@
 themes=(
-    slym
-    mapache
-
+    Casper
+    krabi
+    simply
 )
 
 for theme in "${themes[@]}"
