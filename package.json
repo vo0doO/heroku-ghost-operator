@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "casper": "https://github.com/vo0doo/Casper#main",
-    "krabi": "https://github.com/vo0doo/krabi#master",
+    "krabi": "https://github.com/vo0doo/krabi#vo0doO-nosass",
     "ghost": "^4.41.2",
     "ghost-storage-adapter-s3": "2.8.0",
     "ghost-storage-cloudinary": "2.2.1",
